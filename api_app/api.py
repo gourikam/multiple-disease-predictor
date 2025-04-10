@@ -129,7 +129,7 @@ def predict_heart_disease(data: HeartDiseaseInput):
     ]).reshape(1, -1)
     
     # Make prediction
-    prediction = heart_disease_model.predict(input_data)[0]
+    prediction = heart_model.predict(input_data)[0]
     
     # Return result
     if prediction == 1:
