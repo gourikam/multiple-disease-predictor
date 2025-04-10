@@ -1163,7 +1163,7 @@ elif selected == 'Parkinsons Prediction':
                                 x=param_names,
                                 y=user_values,
                                 name='Your Values',
-                                marker_color='blue'
+                                marker_color='indigo'
                             ))
                             
                             # Add threshold line
