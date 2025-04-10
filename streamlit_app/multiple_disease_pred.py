@@ -103,7 +103,7 @@ with st.sidebar:
     st.sidebar.info("This application uses machine learning to predict disease likelihood based on medical parameters.")
 
 # API URL - make sure this matches your FastAPI server address
-API_URL = "http://127.0.0.1:8000"
+API_URL = "https://fastapi-service.onrender.com"
 
 # Sample data for visualizations (to be used when no real data is available)
 def generate_sample_data():
