@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run multiple_disease_pred.py
+web: streamlit run multiple_disease_pred.py --server.port $PORT --server.enableCORS false
