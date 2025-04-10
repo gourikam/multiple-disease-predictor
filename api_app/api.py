@@ -6,7 +6,7 @@ Created on Wed Apr  9 17:02:42 2025
 @author: gourikamakhija
 """
 
-import pickle
+import joblib
 import numpy as np
 import os
 from fastapi import FastAPI
@@ -26,9 +26,10 @@ app.add_middleware(
 )
 
 # Load models (using relative paths for Heroku compatibility)
-diabetes_model = pickle.load(open('./saved_models/diabetes_model.sav', 'rb'))
-heart_disease_model = pickle.load(open('./saved_models/heart_model.sav', 'rb'))
-parkinsons_model = pickle.load(open('./saved_models/parkinsons_model.sav', 'rb'))
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "saved_models", "diabetes_model.sav")
+diabetes_model = joblib.load(MODEL_PATH)
+heart_model = joblib.load(os.path.join(os.path.dirname(__file__), "saved_models", "heart_model.sav"))
+parkinsons_model = joblib.load(os.path.join(os.path.dirname(__file__), "saved_models", "parkinsons_model.sav"))
 
 # Create data models for inputs
 class DiabetesInput(BaseModel):
