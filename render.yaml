@@ -2,22 +2,25 @@ services:
   - type: web
     name: fastapi-service
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn api:app --host=0.0.0.0 --port=$PORT
     rootDir: api_app
     plan: free
     envVars:
       - key: PORT
         value: 10000
+      - key: PYTHON_VERSION
+        value: 3.9.16
 
   - type: web
     name: streamlit-service
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: streamlit run multiple_disease_pred.py --server.port $PORT
     rootDir: streamlit_app
     plan: free
     envVars:
       - key: PORT
         value: 10001
-
+      - key: PYTHON_VERSION
+        value: 3.9.16
