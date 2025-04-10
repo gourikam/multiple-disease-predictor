@@ -86,6 +86,11 @@ class ParkinsonsInput(BaseModel):
 def home():
     return {"message": "Welcome to the Disease Prediction API"}
 
+@app.get("/health")
+def health_check():
+    """Health check endpoint for keep-alive services"""
+    return {"status": "ok", "message": "API is running"}
+
 @app.post("/predict/diabetes")
 def predict_diabetes(data: DiabetesInput):
     # Convert input data to array
@@ -158,5 +163,5 @@ def predict_parkinsons(data: ParkinsonsInput):
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 10000))
     uvicorn.run("api:app", host="0.0.0.0", port=port, reload=False)
