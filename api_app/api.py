@@ -25,7 +25,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load models (using relative paths for Heroku compatibility)
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "saved_models", "diabetes_model.sav")
 diabetes_model = joblib.load(MODEL_PATH)
 heart_model = joblib.load(os.path.join(os.path.dirname(__file__), "saved_models", "heart_model.sav"))
