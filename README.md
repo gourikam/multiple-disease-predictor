@@ -64,8 +64,10 @@ This project uses a microservices architecture:
 - Implement user authentication
 - Add explanations for predictions
 - Improve model accuracy with advanced algorithms
+  
+## 📝 License
 
-## License
+This project is licensed under the MIT License.
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+### MIT License
    
