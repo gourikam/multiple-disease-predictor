@@ -2,8 +2,6 @@
 
 A web-based application for predicting multiple diseases including diabetes, heart disease, and Parkinson's disease using machine learning algorithms.
 
-## Live Demo
-
 ## 🚀 Live Demo
 
 Check out the live application here: [Health Guardian](https://streamlit-service-xyjm.onrender.com)  
