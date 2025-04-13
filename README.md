@@ -4,7 +4,7 @@ A web-based application for predicting multiple diseases including diabetes, hea
 
 ## 🚀 Live Demo
 
-Check out the live application here: [Health Guardian](https://streamlit-service-xyjm.onrender.com)  
+Check out the live application here: [Health Guard](https://streamlit-service-xyjm.onrender.com)  
 👉 Try entering sample data to see instant health risk predictions!
 
 
