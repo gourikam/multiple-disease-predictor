@@ -225,7 +225,7 @@ def visualize_parameters(input_data, disease_type):
 
 # Home page
 if selected == 'Home':
-    st.markdown('<h1 class="main-header">🏥 Health Guardian - Disease Prediction System</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">🏥 Health Guard - Disease Prediction System</h1>', unsafe_allow_html=True)
     
     # Animation or illustration
     col1, col2 = st.columns([2, 1])
