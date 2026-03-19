@@ -1635,6 +1635,8 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 import time
 from groq import Groq
+import traceback
+import sys
 
 # Retry helper for 429 rate limit errors
 # Population averages from training datasets (used when user selects "I don't know")
@@ -1724,6 +1726,11 @@ def load_lottieurl(url):
     except:
         return None
 
+try:
+    pass
+except Exception as e:
+    st.error(f"Startup error: {traceback.format_exc()}")
+    
 # Page configuration
 st.set_page_config(
     page_title="Disease Prediction System",
